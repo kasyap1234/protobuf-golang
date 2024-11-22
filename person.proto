@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package person; 
+
+option go_package="gen/person";
+
+
+message Person {
+    string name =1 ; 
+    int32  id =2; 
+    int32 age =3; 
+    string email=4;
+}
+
+service Greeter{
+    rpc sayHello(Person) returns(Person); 
+
+}
+
